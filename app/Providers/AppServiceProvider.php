@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
+use App\Addressee;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -12,9 +15,8 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
+	{
 		//
-		\Illuminate\Support\Facades\Schema::defaultStringLength(191);
     }
 
     /**

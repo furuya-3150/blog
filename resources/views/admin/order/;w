@@ -1,0 +1,24 @@
+<html>
+<body>
+<h1>注文詳細</h1>
+<table border="1">
+<tr>
+<th>注文日</th>
+<th>合計金額</th>
+<th>お届け先氏名</th>
+<th>お届け先住所</th>
+<th>商品情報</th>
+</tr>
+<tr>
+<td>{{ $payment->created_at }}</td>
+<td>{{ $payment->total}}円</td>
+<td>{{ $payment->name}}</td>
+<td>〒{{ $payment->postal_code}}
+</br>{{ $payment->prefectures . $payment->municipalities . $payment->address}}</td>
+<td>{{ $payment->cart->item->name }}を
+{{ $payment->cart->quantity }}個購入</td>
+</tr>
+@endforeach
+</table>
+</body>
+</html>
